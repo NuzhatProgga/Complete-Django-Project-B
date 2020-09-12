@@ -1,5 +1,8 @@
+
 {% extends 'base.html' %}
 
+
+{% load static %}
 
 {% block content %}
 
@@ -7,7 +10,8 @@
         <h3>Student: {{ s.id }}</h3>
         {{ s.name }} <br>
         {{ s.email }} <br>
-        {{ s.contact_no }} <br><br>
+        {{ s.contact_no }} <br>
+        <img src="{% static "StudentManagement/meme1.jpg" %}" alt="My image" height="100" width="100"><br><br>
     {% endfor %}
 
 
