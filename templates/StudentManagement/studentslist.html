@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    {% for s in studentList %}
+        <h3>Student: {{ s.id }}</h3>
+        {{ s.name }} <br>
+        {{ s.email }} <br>
+        {{ s.contact_no }} <br><br>
+    {% endfor %}
+
+
+{% endblock content %}
