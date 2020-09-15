@@ -11,7 +11,12 @@
         {{ s.name }} <br>
         {{ s.email }} <br>
         {{ s.contact_no }} <br>
-        <img src="{% static "StudentManagement/meme1.jpg" %}" alt="My image" height="100" width="100"><br><br>
+{#        {{ s.address }} <br>#}
+
+       House No:  {{ s.address.house_no }} <br>
+       Post Code: {{ s.address.post_code }} <br>
+       City:  {{ s.address.city }} <br>
+        <br><br>
     {% endfor %}
 
 
