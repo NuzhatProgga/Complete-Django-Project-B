@@ -6,6 +6,7 @@
 
 {% block content %}
 
+    <h2>Student Info</h2>
     {% for s in studentList %}
         <h3>Student: {{ s.id }}</h3>
         {{ s.name }} <br>
@@ -13,9 +14,14 @@
         {{ s.contact_no }} <br>
 {#        {{ s.address }} <br>#}
 
+        <h4>Address</h4>
        House No:  {{ s.address.house_no }} <br>
        Post Code: {{ s.address.post_code }} <br>
        City:  {{ s.address.city }} <br>
+
+        <h4>Advisor: {{ s.advisor }}</h4>
+
+
         <br><br>
     {% endfor %}
 

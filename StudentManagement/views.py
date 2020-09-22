@@ -2,6 +2,8 @@ from django.shortcuts import render
 from .models import Student
 from .forms import StudentInsertForm
 # Create your views here.
+from django.contrib.auth.decorators import login_required
+
 
 def showStudentList(request):
     all_students = Student.objects.all()
@@ -10,7 +12,7 @@ def showStudentList(request):
     }
     return render(request, 'StudentManagement/studentslist.html', context)
 
-
+@login_required
 def insertStudents(request):
 
     form = StudentInsertForm()
