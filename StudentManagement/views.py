@@ -19,7 +19,7 @@ def insertStudents(request):
     message = "Insert Student info"
 
     if request.method == "POST":
-        form = StudentInsertForm(request.POST)
+        form = StudentInsertForm(request.POST, request.FILES)
         message = "Not Successful"
         if form.is_valid():
             form.save()

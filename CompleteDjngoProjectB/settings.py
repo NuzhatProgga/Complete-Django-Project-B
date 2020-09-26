@@ -41,8 +41,12 @@ INSTALLED_APPS = [
     'StudentManagement.apps.StudentmanagementConfig',
     'FacultyManagement.apps.FacultymanagementConfig',
     'CourseManagement.apps.CoursemanagementConfig',
-    'UserManagement.apps.UsermanagementConfig'
+    'UserManagement.apps.UsermanagementConfig',
+
+    'crispy_forms'
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

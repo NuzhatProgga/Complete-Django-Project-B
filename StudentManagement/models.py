@@ -19,6 +19,7 @@ class Student(models.Model):
     name = models.CharField(max_length=100, default="")
     email = models.EmailField(max_length=200, unique=True)
     contact_no = models.IntegerField(blank=True, null=True)
+    image = models.ImageField(upload_to='images/students', blank=True, null=True, default='images/aaaaaaaa.jpg')
 
     address = models.ForeignKey(Address, on_delete=models.SET_NULL, default=1, null=True)
     advisor = models.ForeignKey(Advisor, on_delete=models.SET_NULL, default=1, null=True)
